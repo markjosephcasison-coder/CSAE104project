@@ -61,8 +61,6 @@ a:hover {
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 200px;
     height: 200px;
 }
@@ -93,9 +91,6 @@ img {
     color: green;
 }
 
-.content h3 {
-    color: brown;
-}
 
 form {
     background-color: white;
