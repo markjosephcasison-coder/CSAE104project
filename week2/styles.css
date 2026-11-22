@@ -1,28 +1,42 @@
-
+```css
 :root {
     --brand: #1f7a5c;
     --space: 1rem;
+    --body-bg: gray;
+    --border-color: brown;
+    --white: white;
+    --black: black;
+    --blue: blue;
+    --green: green;
+    --pink: pink;
+    --powder-blue: powderblue;
+    --dodger-blue: dodgerblue;
+    --light-gray: lightgray;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: gray;
-    border: 5px solid brown;
-    padding: 30px;
-    margin: 50px;
+    background-color: var(--body-bg);
+    border: 5px solid var(--border-color);
+    padding: 2rem;
+    margin: 2rem;
 }
 
 #title {
-    background: white;
-    padding: 1rem;
+    background: var(--white);
+    padding: var(--space);
     border-radius: 8px;
 }
 
 p {
-    color: blue;
+    color: var(--blue);
 }
 
 .card {
-    padding: 1rem;
+    padding: var(--space);
     text-align: center;
 }
 
@@ -31,7 +45,7 @@ p {
 }
 
 nav a {
-    color: black;
+    color: var(--black);
 }
 
 a:hover {
@@ -44,18 +58,18 @@ a:hover {
 }
 
 .btn.primary {
-    background: green;
+    background: var(--green);
 }
 
 #sentence1 {
-    color: pink;
+    color: var(--pink);
     font-weight: bold;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .bg1 {
-    background-color: powderblue;
+    background-color: var(--powder-blue);
     text-align: center;
 }
 
@@ -66,12 +80,12 @@ img {
 }
 
 .container {
-    background-color: dodgerblue;
+    background-color: var(--dodger-blue);
     padding: 5px;
 }
 
 .container div {
-    background-color: white;
+    background-color: var(--white);
     padding: 10px;
 }
 
@@ -80,7 +94,7 @@ img {
 }
 
 .menu {
-    background-color: lightgray;
+    background-color: var(--light-gray);
 }
 
 .content {
@@ -88,12 +102,11 @@ img {
 }
 
 .content h2 {
-    color: green;
+    color: var(--green);
 }
 
-
 form {
-    background-color: white;
+    background-color: var(--white);
     padding: 15px;
 }
 
@@ -107,8 +120,28 @@ input, textarea {
     margin-top: 5px;
 }
 
-button {
-    background-color: green;
-    color: white;
-    padding: 10px;
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+button {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+```
