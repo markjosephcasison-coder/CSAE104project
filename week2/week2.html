@@ -1,201 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Notices</title>
+</head>
 
-:root {
-  --brand: #1d4e89;
-  --brand-soft: #e0ecf8;
-  --surface: #ffffff;
-  --page: #f4f7fa;
-  --text: #1f2933;
-  --border: #d9e2ec;
-  --radius: 8px;
-}
+<body>
 
-* {
-  box-sizing: border-box;
-}
+  <header>
+    <h1>Campus Notices</h1>
+  </header>
 
-body {
-  font-family: system-ui, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  background: var(--page);
-  color: var(--text);
-}
 
-header {
-  background: var(--brand);
-  color: white;
-  padding: 24px;
-  text-align: center;
-}
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#notices">Notices</a></li>
+      <li><a href="#deadlines">Deadlines</a></li>
+      <li><a href="#submit">Post a notice</a></li>
+    </ul>
+  </nav>
 
-header h1 {
-  margin: 0;
-}
+  <main>
 
-nav {
-  background: #163b69;
-  padding: 14px 24px;
-}
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+    <section id="notices">
+      <h2>Latest Notices</h2>
 
-nav li {
-  display: inline-block;
-  margin: 0 12px;
-}
+      <article class="notice">
+        <h2>Library hours extended</h2>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
+        <p class="meta">
+          <time datetime="2026-10-12">
+            12 October 2026
+          </time>
+          ·
+          <span class="tag">Academic</span>
+        </p>
 
-nav a:hover {
-  text-decoration: underline;
-}
+        <p>
+          The library stays open until 9 PM during midterm week.
+        </p>
+      </article>
+    </section>
 
-main {
-  max-width: 720px;
-  margin: 32px auto;
-  padding: 0 16px;
-}
+    <section id="deadlines">
+      <h2>Upcoming deadlines</h2>
 
-section {
-  margin-bottom: 32px;
-}
+      <table>
+        <caption>Deadlines this month</caption>
 
-section > h2 {
-  color: var(--brand);
-  margin-bottom: 16px;
-}
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
 
-.notice {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 16px;
-}
+        <tbody>
+          <tr>
+            <td>Enrolment ends</td>
+            <td>20 January</td>
+          </tr>
 
-.notice h2 {
-  color: var(--brand);
-}
+          <tr>
+            <td>Programming contest registration</td>
+            <td>25 January</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-.meta {
-  color: #64748b;
-  font-size: 0.9rem;
-}
 
-.tag {
-  background: var(--brand-soft);
-  color: var(--brand);
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
+    <section id="submit">
+      <h2>Post a notice</h2>
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  background: var(--surface);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
+      <form action="#" method="post">
 
-caption {
-  text-align: left;
-  padding: 10px 0;
-  font-weight: 600;
-}
+        <p>
+          <label for="title">Title</label><br>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            maxlength="100">
+        </p>
 
-th, td {
-  border: 1px solid var(--border);
-  padding: 12px;
-  text-align: left;
-}
+        <p>
+          <label for="category">Category</label><br>
+          <select id="category" name="category">
+            <option value="academic">Academic</option>
+            <option value="event">Event</option>
+            <option value="general">General</option>
+          </select>
+        </p>
 
-th {
-  background: var(--brand-soft);
-  color: var(--brand);
-}
+        <p>
+          <label for="date">Date</label><br>
+          <input
+            type="date"
+            id="date"
+            name="date">
+        </p>
 
-form {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
-}
+        <p>
+          <label for="message">Message</label><br>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required></textarea>
+        </p>
 
-form p {
-  margin-bottom: 18px;
-}
+        <p>
+          <label for="email">Your email</label><br>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+        </p>
 
-label {
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
+        <button type="submit">Post notice</button>
 
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font: inherit;
-}
+      </form>
+    </section>
 
-input:focus, select:focus, textarea:focus {
-  outline: 3px solid var(--brand-soft);
-  border-color: var(--brand);
-}
+  </main>
 
-textarea {
-  resize: vertical;
-}
+  
+  <footer>
+    <p>College of Computer Science, DMMMSU-SLUC</p>
+  </footer>
 
-button {
-  background: var(--brand);
-  color: white;
-  border: 0;
-  border-radius: var(--radius);
-  padding: 10px 20px;
-  font: inherit;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #163b69;
-}
-
-footer {
-  background: #163b69;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
-}
-
-@media (max-width: 600px) {
-  nav li {
-    margin: 5px 8px;
-  }
-
-  main {
-    margin: 20px auto;
-  }
-
-  th, td {
-    padding: 8px;
-  }
-}
+</body>
+</html>
