@@ -1,78 +1,255 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<title>Saint Louis College of San Fernando, La Union</title>
-
-
-<link rel="stylesheet" href="styles3.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bail National High School</title>
+    <link rel="stylesheet" href="styles3.css">
 </head>
-
 
 <body>
 
-
+    
 <header>
+    <div class="school-brand">
+        <img src="logo.png" alt="Bail National High School Logo" class="school-logo">
 
-<img src="https://slc-sflu.edu.ph/wp-content/uploads/2025/01/SLC_HIGHSCHOOL.png"
-
-alt="Saint Louis College Logo">
-
-SAINT LOUIS COLLEGE OF SAN FERNANDO, LA UNION
-
+        <div>
+            <h1>Bail National High School</h1>
+            <p>Santo Tomas, La Union</p>
+        </div>
+    </div>
 </header>
 
 
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
+    <main>
 
-<a href="home.html">Home</a>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="welcome">WELCOME TO</p>
+                <h2>Bail National High School</h2>
+                <h3>Your Door to a Successful Future</h3>
+                <p>
+                    Welcome to Bail National High School!
+                    A place where students learn, grow,
+                    discover their talents, and build
+                    a brighter future.
+                </p>
+                <a href="#about" class="button">Discover More</a>
+            </div>
 
-<a href="aboutus.html">About Us</a>
+            <div class="hero-image">
+                <img src="school.jpg" alt="Bail National High School campus">
+            </div>
+        </section>
 
-<a href="contactus.html">Contact Us</a>
+        <section id="about">
+            <h2>About Our School</h2>
+            <div class="about-card">
+                <p>
+                    Bail National High School is located in
+                    Santo Tomas, La Union. It provides
+                    educational opportunities that help
+                    students develop their knowledge,
+                    skills, values, and confidence.
+                </p>
+                <p>
+                    The school aims to support students
+                    in their academic journey and prepare
+                    them for future opportunities.
+                </p>
+            </div>
+        </section>
 
-</nav>
+        <section id="academics">
+            <h2>Explore Our School</h2>
 
-<main>
+            <div class="notices">
 
-<form>
+                <article class="notice">
+                    <span class="tag">Learning</span>
+                    <h2>Academic Excellence</h2>
+                    <p>
+                        Develop knowledge and skills through
+                        classroom learning and educational
+                        activities.
+                    </p>
+                </article>
 
-<h3> Log In Form</h3>
+                <article class="notice">
+                    <span class="tag">Students</span>
+                    <h2>Student Development</h2>
+                    <p>
+                        Encourage creativity, leadership,
+                        responsibility, and personal growth.
+                    </p>
+                </article>
 
-<label> User Name: </label>
+                <article class="notice">
+                    <span class="tag">Community</span>
+                    <h2>School Community</h2>
+                    <p>
+                        Build friendships, teamwork,
+                        cooperation, and respect among
+                        students and teachers.
+                    </p>
+                </article>
 
-<input type="text" name="UserName" required></input>
+            </div>
+        </section>
 
-<label> Password: </label>
+        <section id="announcements">
+            <h2>Latest Announcements</h2>
 
-<input type="text" name="Password" required></input>
+            <article class="notice">
+                <h2>School Updates</h2>
+                <p class="meta">General Information</p>
+                <p>
+                    Stay updated with important school
+                    announcements and activities.
+                </p>
+            </article>
 
-<button type="Submit"> Log in </button>
+            <article class="notice">
+                <h2>Enrollment Information</h2>
+                <p class="meta">Enrollment</p>
+                <p>
+                    Check with the school for enrollment
+                    schedules, requirements, and other
+                    important information.
+                </p>
+            </article>
+        </section>
 
+        <section id="information">
+            <h2>School Information</h2>
 
+            <table>
+                <caption>Basic School Details</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Information</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
 
+                <tbody>
+                    <tr>
+                        <td>School Name</td>
+                        <td>Bail National High School</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Santo Tomas, La Union</td>
+                    </tr>
+                    <tr>
+                        <td>School Type</td>
+                        <td>Public Secondary School</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-</form>
+        <section id="contact">
+            <h2>Contact / Inquiry</h2>
+            <p>
+                Have questions? You may use this sample
+                inquiry form.
+            </p>
 
-</main>
+            <form action="#" method="post">
 
-<aside>
+                <p>
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+                </p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/60/FvfLaUnion8099_18.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Saint Louis College Campus"/>
+                <p>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </p>
 
-</aside>
+                <p>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="enrollment">Enrollment</option>
+                        <option value="academic">Academic Inquiry</option>
+                    </select>
+                </p>
 
-<footer> 2026 Saint Louis College of San Fernando, La Union. All Rights Reserved. </footer>
+                <p>
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Write your message here"
+                        required></textarea>
+                </p>
+
+                <button type="submit">Send Inquiry</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Explore More</h2>
+
+        <article class="sidebar-card">
+            <h3>Our School</h3>
+            <p>
+                Discover the learning environment
+                and opportunities at Bail National
+                High School.
+            </p>
+        </article>
+
+        <article class="sidebar-card">
+            <h3>Our Location</h3>
+            <p>Santo Tomas, La Union, Philippines.</p>
+        </article>
+
+        <article class="sidebar-card">
+            <h3>For Students</h3>
+            <p>
+                Learn, participate, build friendships,
+                and make every school year meaningful.
+            </p>
+        </article>
+    </aside>
+
+    <footer>
+        <h2>Bail National High School</h2>
+        <p>Santo Tomas, La Union</p>
+        <p class="copyright">
+            &copy; 2026 Bail National High School Homepage Project.
+            For educational purposes.
+        </p>
+    </footer>
 
 </body>
-
 </html>
