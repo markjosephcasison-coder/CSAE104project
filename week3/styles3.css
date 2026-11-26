@@ -2,13 +2,13 @@
 /* CSS VARIABLES */
 
 :root {
-    --brand: #001D5B;
-    --brand-soft: #EAF2FA;
+    --brand: #142B50;
+    --brand-soft: #E3EAF2;
     --surface: #FFFFFF;
-    --page: #F4F7FB;
-    --text: #252525;
-    --border: #D9DEE8;
-    --gold: #B9D9F2;
+    --page: #F6F1E8;
+    --text: #30343B;
+    --border: #DDD8CE;
+    --accent: #142B50;
     --radius: 8px;
 }
 
@@ -36,38 +36,43 @@ body {
 /* HEADER */
 
 header {
-    background: #FFFFFF;
+    background: var(--brand-soft);
     color: var(--brand);
     padding: 20px 32px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px 24px;
     border-bottom: 3px solid var(--brand);
+    min-width: 0;
 }
 
 .school-brand {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
+}
+
+.school-brand > div {
+    min-width: 0;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+    line-height: 1.3;
     color: var(--brand);
+    overflow-wrap: break-word;
 }
 
 header p {
-    margin: 0;
-    color: #555555;
+    margin: 4px 0 0;
+    color: var(--text);
+    font-size: 15px;
 }
 
 .school-logo {
     width: 85px;
     height: 85px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* NAVIGATION */
@@ -98,7 +103,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--gold);
+    color: var(--brand-soft);
     text-decoration: underline;
 }
 
@@ -109,6 +114,7 @@ main {
     width: 100%;
     margin: 24px auto;
     padding: 0 16px;
+    min-width: 0;
 }
 
 section {
@@ -123,7 +129,7 @@ section > h2 {
 /* WELCOME SECTION */
 
 .hero {
-    background: linear-gradient(120deg, #001D5B, #16458A);
+    background: linear-gradient(120deg, #142B50, #263F65);
     color: white;
     padding: 40px;
     border-radius: var(--radius);
@@ -131,10 +137,12 @@ section > h2 {
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
+    overflow: visible;
 }
 
 .hero-content {
     flex: 1 1 280px;
+    min-width: 0;
 }
 
 .hero-content h2 {
@@ -143,7 +151,7 @@ section > h2 {
 }
 
 .hero-content h3 {
-    color: var(--gold);
+    color: var(--brand-soft);
 }
 
 .hero-content p {
@@ -151,33 +159,52 @@ section > h2 {
 }
 
 .welcome {
-    color: var(--gold);
+    color: var(--brand-soft);
     font-weight: bold;
     letter-spacing: 3px;
 }
 
+/* DISCOVER MORE BUTTON */
+
 .button {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--brand);
-    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: var(--brand);
+    color: #FFFFFF;
+    padding: 12px 22px;
+    border: 2px solid #FFFFFF;
     border-radius: var(--radius);
     text-decoration: none;
     font-weight: bold;
     margin-top: 12px;
+    min-height: 44px;
+    max-width: 100%;
+    white-space: normal;
+    cursor: pointer;
 }
 
 .button:hover {
-    background: white;
+    background: #263F65;
+    color: #FFFFFF;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--brand-soft);
+    outline-offset: 4px;
 }
 
 /* SCHOOL IMAGE */
 
 .hero-image {
     flex: 1 1 280px;
+    min-width: 0;
 }
 
 .hero-image img {
+    display: block;
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -206,6 +233,11 @@ section > h2 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 20px;
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+#announcements > .notice {
     margin-bottom: 16px;
 }
 
@@ -313,7 +345,7 @@ button {
 }
 
 button:hover {
-    background: #16458A;
+    background: #263F65;
 }
 
 /* SIDEBAR */
@@ -323,6 +355,7 @@ aside {
     padding: 20px;
     border-radius: var(--radius);
     margin: 0 16px;
+    min-width: 0;
 }
 
 aside h2 {
@@ -349,19 +382,19 @@ aside h2 {
 /* FOOTER */
 
 footer {
-    background: var(--brand);
-    color: white;
+    background: var(--brand-soft);
+    color: var(--brand);
+    padding: 20px;
     text-align: center;
-    padding: 24px;
-    margin-top: 24px;
+    border-top: 3px solid var(--brand);
 }
 
 footer h2 {
-    color: var(--gold);
+    color: var(--brand);
 }
 
 footer a {
-    color: white;
+    color: var(--brand);
 }
 
 footer p {
@@ -370,7 +403,7 @@ footer p {
 
 .copyright {
     font-size: 0.85rem;
-    color: var(--brand-soft);
+    color: #30343B;
 }
 
 /* RESPONSIVE IMAGES */
@@ -378,6 +411,35 @@ footer p {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 480px) {
+    header {
+        padding: 16px;
+    }
+
+    .school-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
 }
 
 /* TABLET */
@@ -396,7 +458,7 @@ img {
 
 @media (min-width: 960px) {
     body {
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: minmax(0, 1fr) 300px;
         grid-template-areas:
             "header header"
             "nav nav"
